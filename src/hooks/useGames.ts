@@ -29,7 +29,10 @@ const useGames = () => {
     const controller = new AbortController();
 
     apiClient
-      .get<FetchGamesResponse>("/games", { signal: controller.signal })
+      .get<FetchGamesResponse>("/games", {
+        signal: controller.signal,
+        params: { page_size: 30 },
+      })
       .then((res) => setGames(res.data.results))
       .catch((err) => {
         if (err instanceof CanceledError) return;
