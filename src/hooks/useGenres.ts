@@ -25,7 +25,6 @@ const useGenres = () => {
     apiClient
       .get<FetchGenresResponse>("/genres", {
         signal: controller.signal,
-        params: { page_size: 30 },
       })
       .then((res) => {
         setGenres(res.data.results);
