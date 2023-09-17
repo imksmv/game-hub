@@ -6,20 +6,16 @@ import { Platform } from "../hooks/useGames";
 interface Props {
   onSelectPlatform: (platform: Platform) => void;
   selectedPlatform: Platform | null;
-  marginBot?: number;
 }
 
-const PlatformSelector = ({
-  onSelectPlatform,
-  selectedPlatform,
-  marginBot,
-}: Props) => {
+const PlatformSelector = ({ onSelectPlatform, selectedPlatform }: Props) => {
   const { data, error } = usePlatforms();
 
   if (error) return null;
+
   return (
     <Menu>
-      <MenuButton mb={marginBot} as={Button} rightIcon={<BsChevronDown />}>
+      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
         {selectedPlatform?.name || "Platforms"}
       </MenuButton>
       <MenuList>
