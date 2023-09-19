@@ -12,7 +12,7 @@ import { BsGlobe } from "react-icons/bs";
 import { IconType } from "react-icons";
 import { HStack, Icon } from "@chakra-ui/react";
 import { Platform } from "../hooks/useGames";
-import { Text } from "@chakra-ui/react";
+import { Badge } from "@chakra-ui/react";
 
 interface Props {
   platforms: Platform[];
@@ -33,9 +33,9 @@ const PlatformIconList = ({ platforms }: Props) => {
 
   if (platforms.length === 0)
     return (
-      <Text as="s" color="gray.500">
-        No platforms found
-      </Text>
+      <Badge colorScheme={"red"} fontSize="12px" px={2} borderRadius="4px">
+        No platforms
+      </Badge>
     );
 
   return (
@@ -45,13 +45,7 @@ const PlatformIconList = ({ platforms }: Props) => {
 
         if (!basicPlatform) return null;
 
-        return (
-          <Icon
-            color="gray.500"
-            key={platform.id}
-            as={iconMap[platform.slug]}
-          />
-        );
+        return <Icon color="gray.500" key={platform.id} as={basicPlatform} />;
       })}
     </HStack>
   );

@@ -9,8 +9,8 @@ const CriticScore = ({ score }: Props) => {
 
   if (score === null)
     return (
-      <Badge colorScheme={"red"} fontSize="14px" px={2} borderRadius="4px">
-        No info
+      <Badge colorScheme={"red"} fontSize="12px" px={2} borderRadius="4px">
+        No score
       </Badge>
     );
 
