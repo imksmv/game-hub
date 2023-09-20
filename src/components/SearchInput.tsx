@@ -9,18 +9,17 @@ interface Props {
 const SearchInput = ({ onSearch }: Props) => {
   const refForm = useRef<HTMLInputElement>(null);
 
-  if (refForm.current) onSearch(refForm.current.value);
-
   return (
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        if (refForm.current) console.log(refForm.current.value);
+        if (refForm.current) onSearch(refForm.current.value);
       }}
     >
       <InputGroup>
         <InputLeftElement pointerEvents="none" children={<LuSearch />} />
         <Input
+          id="input"
           ref={refForm}
           borderRadius={20}
           placeholder="Search"
