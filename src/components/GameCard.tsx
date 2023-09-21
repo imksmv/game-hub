@@ -13,8 +13,7 @@ const GameCard = ({ game }: Props) => {
     <Card variant="filled">
       <Image src={getCroppedImgUrl(game.background_image)} />
       <CardBody>
-        <Heading fontSize="lg">{game.name}</Heading>
-        <HStack justifyContent="space-between">
+        <HStack justifyContent="space-between" mb={1}>
           <PlatformIconList
             platforms={
               game.parent_platforms
@@ -24,6 +23,7 @@ const GameCard = ({ game }: Props) => {
           />
           <CriticScore score={game.metacritic} />
         </HStack>
+        <Heading fontSize="lg">{game.name}</Heading>
       </CardBody>
     </Card>
   );
