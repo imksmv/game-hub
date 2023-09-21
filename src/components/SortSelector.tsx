@@ -22,10 +22,14 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
 
   return (
     <Menu>
-      <MenuButton as={Button} rightIcon={<BsChevronDown />}>
+      <MenuButton
+        size={{ base: "sm", md: "md" }}
+        as={Button}
+        rightIcon={<BsChevronDown />}
+      >
         Order by: {sortOrder ? selectedSortOrder?.label : "Relevance"}
       </MenuButton>
-      <MenuList>
+      <MenuList fontSize={{ base: "sm", md: "md" }} size>
         {sortOrders.map((order) => (
           <MenuItem
             onClick={() => onSelectSortOrder(order.value)}
