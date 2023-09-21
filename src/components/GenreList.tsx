@@ -20,12 +20,13 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, error, isLoading } = useGenres();
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
+  if (error) return <Text color="red">{error}</Text>;
+
   return (
     <>
       <Heading as="h2" mb={5} fontSize="2xl">
         Genres
       </Heading>
-      {error && <Text color="red">{error}</Text>}
       {isLoading &&
         skeletons.map((skeleton) => <GenreListSkeleton key={skeleton} />)}
       <List>
