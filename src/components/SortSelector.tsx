@@ -29,7 +29,7 @@ const SortSelector = ({ onSelectSortOrder, sortOrder }: Props) => {
       >
         Order by: {sortOrder ? selectedSortOrder?.label : "Relevance"}
       </MenuButton>
-      <MenuList fontSize={{ base: "sm", md: "md" }} size>
+      <MenuList fontSize={{ base: "sm", md: "md" }}>
         {sortOrders.map((order) => (
           <MenuItem
             onClick={() => onSelectSortOrder(order.value)}

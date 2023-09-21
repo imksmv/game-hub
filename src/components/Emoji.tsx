@@ -1,4 +1,4 @@
-import { Text, TextProps } from "@chakra-ui/react";
+import { Text } from "@chakra-ui/react";
 
 interface Props {
   rating: number;
