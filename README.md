@@ -3,6 +3,7 @@
 **Game Hub is a video game discovery web app that helps you find new and interesting games to play. With Game Hub, you can search for games by platform, genre, and more.**
 
 ## Getting Started
+
 To get started follow these steps:
 
 1. Clone this repository to your local machine.
