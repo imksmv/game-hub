@@ -6,7 +6,7 @@ interface Props {
 
 const Emoji = ({ rating }: Props) => {
   const emojiMap: { [key: number]: string } = {
-    2: "🙂",
+    3: "🙂",
     4: "😃",
     5: "😍",
   };
