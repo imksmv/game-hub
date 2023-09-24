@@ -1,5 +1,5 @@
 ### Game-Hub
 
-Game Hub is a video game discovery web app that helps you find new and interesting games to play. With GameHub, you can search for games by platform, genre, and more.
+Here is the link: [Game Hub](https://game-hub-git-main-imksmv.vercel.app/)
 
-A replica of RAWG.io web-app related to games.
+Game Hub is a video game discovery web app that helps you find new and interesting games to play. With Game Hub, you can search for games by platform, genre, and more.
