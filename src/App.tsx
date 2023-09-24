@@ -48,7 +48,7 @@ const App = () => {
         </Show>
         <GridItem area="main">
           <GameHeading gameQuery={gameQuery} />
-          <HStack spacing={5} mb={7}>
+          <HStack spacing={5}>
             <PlatformSelector
               selectedPlatform={gameQuery.platform}
               onSelectPlatform={(platform) =>
