@@ -20,7 +20,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   const { data, error, isLoading } = useGenres();
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
-  if (error) return <Text color="red">{error}</Text>;
+  if (error) return <Text color="red">{error.message}</Text>;
 
   return (
     <>
