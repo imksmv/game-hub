@@ -1,4 +1,4 @@
-### Game-Hub
+# Game-Hub
 
 Here is the link: [Game Hub](https://game-hub-git-main-imksmv.vercel.app/)
 
