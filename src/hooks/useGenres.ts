@@ -12,7 +12,7 @@ const useGenres = () =>
     queryKey: ["genres"],
     queryFn: () =>
       apiClient.get<FetchResponse<Genre>>("/genres").then((res) => res.data),
-    staleTime: 1000 * 60 * 60 * 24,
+    staleTime: 1000 * 60 * 60 * 24, // 24 hours
   });
 
 export default useGenres;
