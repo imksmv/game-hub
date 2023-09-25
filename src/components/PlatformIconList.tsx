@@ -1,4 +1,4 @@
-import { Badge, HStack, Icon } from "@chakra-ui/react";
+import { HStack, Icon } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 import { BsGlobe } from "react-icons/bs";
 import {
@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
-import { Platform } from "../entities/Platform";
+import Platform from "../entities/Platform";
 import NoInfoBadge from "./NoInfoBadge";
 
 interface Props {
