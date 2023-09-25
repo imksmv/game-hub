@@ -1,4 +1,4 @@
-import { SimpleGrid, Text } from "@chakra-ui/react";
+import { SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import { Fragment } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import useGames from "../hooks/useGames";
@@ -17,7 +17,7 @@ const GameGrid = () => {
       dataLength={data?.pages.length || 0}
       next={fetchNextPage}
       hasMore={!!hasNextPage}
-      loader={null}
+      loader={<Spinner />}
     >
       <SimpleGrid columns={{ sm: 1, md: 2, lg: 3 }} spacing={6} py={5}>
         {isLoading &&
