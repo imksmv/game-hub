@@ -1,4 +1,5 @@
 import { Badge } from "@chakra-ui/react";
+import NoInfoBadge from "./NoInfoBadge";
 
 interface Props {
   score: number;
@@ -7,12 +8,7 @@ interface Props {
 const CriticScore = ({ score }: Props) => {
   const color = score >= 80 ? "green" : score >= 60 ? "yellow" : "red";
 
-  if (score === null)
-    return (
-      <Badge colorScheme={"red"} fontSize="12px" px={2} borderRadius="4px">
-        No score
-      </Badge>
-    );
+  if (score === null) return <NoInfoBadge>No Score</NoInfoBadge>;
 
   return (
     <Badge colorScheme={color} fontSize="14px" px={2} borderRadius="4px">

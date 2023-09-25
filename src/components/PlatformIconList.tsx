@@ -12,6 +12,7 @@ import {
 import { MdPhoneIphone } from "react-icons/md";
 import { SiNintendo } from "react-icons/si";
 import { Platform } from "../entities/Platform";
+import NoInfoBadge from "./NoInfoBadge";
 
 interface Props {
   platforms: Platform[];
@@ -30,12 +31,7 @@ const PlatformIconList = ({ platforms }: Props) => {
     web: BsGlobe,
   };
 
-  if (platforms.length === 0)
-    return (
-      <Badge colorScheme={"red"} fontSize="12px" px={2} borderRadius="4px">
-        No platforms
-      </Badge>
-    );
+  if (platforms.length === 0) return <NoInfoBadge>No platforms</NoInfoBadge>;
 
   return (
     <HStack my={1}>

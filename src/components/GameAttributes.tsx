@@ -2,6 +2,7 @@ import { SimpleGrid, Text } from "@chakra-ui/react";
 import { Game } from "../entities/Game";
 import CriticScore from "./CriticScore";
 import DefinitionItem from "./DefinitionItem";
+import NoInfoBadge from "./NoInfoBadge";
 
 interface Props {
   game: Game;
@@ -24,11 +25,13 @@ const GameAttributes = ({ game }: Props) => {
         ))}
       </DefinitionItem>
       <DefinitionItem term="Publishers">
-        {game.publishers && game.publishers.length > 0
-          ? game.publishers.map((publisher) => (
-              <Text key={publisher.id}>{publisher.name}</Text>
-            ))
-          : "No publisher found"}
+        {game.publishers && game.publishers.length > 0 ? (
+          game.publishers.map((publisher) => (
+            <Text key={publisher.id}>{publisher.name}</Text>
+          ))
+        ) : (
+          <NoInfoBadge>No Publishers</NoInfoBadge>
+        )}
       </DefinitionItem>
     </SimpleGrid>
   );
