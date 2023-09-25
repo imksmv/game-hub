@@ -3,17 +3,13 @@ import logo from "../assets/logo.png";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 
-interface Props {
-  onSearch: (searchText: string) => void;
-}
-
-const NavBar = ({ onSearch }: Props) => {
+const NavBar = () => {
   return (
     <Flex alignItems="center" gap={4} mt={4} mb={8}>
       <Link flexShrink={0} href="/">
         <Image src={logo} boxSize="60px" />
       </Link>
-      <SearchInput onSearch={onSearch} />
+      <SearchInput />
       <ColorModeSwitch />
     </Flex>
   );
