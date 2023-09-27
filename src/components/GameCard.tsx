@@ -14,7 +14,17 @@ const GameCard = ({ game }: Props) => {
   return (
     <Link to={"/games/" + game.slug}>
       <Card variant="filled">
-        <Image src={getCroppedImgUrl(game.background_image)} />
+        <Image
+          src={getCroppedImgUrl(game.background_image)}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = "scale(1.05)";
+            e.currentTarget.style.transition = "transform 0.3s ease-in-out";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = "scale(1)";
+            e.currentTarget.style.transition = "transform 0.3s ease-in-out";
+          }}
+        />
         <CardBody>
           <Flex
             justifyContent="space-between"
