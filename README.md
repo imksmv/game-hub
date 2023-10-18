@@ -10,4 +10,4 @@ To get started follow these steps:
 2. Run `npm install` to install the required dependencies.
 3. Run `npm run dev` to start the web server.
 
-You can also check the link: [Game Hub](https://game-hub-git-main-imksmv.vercel.app/)
+You can also check the link: [Game Hub](https://game-hub-kappa-lac.vercel.app/)
