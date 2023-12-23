@@ -1,6 +1,8 @@
 # Game-Hub
 
-**Game Hub is a video game discovery web app that helps you find new and interesting games to play. With Game Hub, you can search for games by platform, genre, and more.**
+A video game discovery web app that helps you find new and interesting games
+to play. Users can search directly or filter games by category, platform and relevance. Users are also
+provided with a detailed page for each game.
 
 ## Getting Started
 
